@@ -1,0 +1,31 @@
+// breakpoints
+$smallphone: 23.4375em; // 375 / 16
+$phone: 37.5em; // 600 / 16
+$tablet: 48em; // 768 / 16
+$desktop: 64em; // 1024 / 16
+
+@mixin respond($breakpoint){
+    @if $breakpoint == smallphone {
+        @media only screen and (max-width: $smallphone) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == phone {
+        @media only screen and (max-width: $phone) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == tablet {
+        @media only screen and (max-width: $tablet) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == desktop {
+        @media only screen and (max-width: $desktop) {
+            @content;
+        }
+    }
+}

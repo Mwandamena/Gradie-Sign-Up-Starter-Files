@@ -1,0 +1,13 @@
+@mixin middle($direction: row){
+    display: flex;
+    flex-direction: $direction;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@mixin flex($direction: row){
+    display: flex;
+    flex-direction: $direction;
+}
